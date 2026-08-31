@@ -2,7 +2,14 @@
 
 Turn a single long-form video into several ready-to-upload vertical Shorts,
 fully automated: transcription, clip selection, and rendering all happen
-in one run.
+in one run. Example output: https://www.youtube.com/shorts/b7LhuIzKvkg 
+
+## Notes from the 'prompt engineer' 🥀
+
+Just to be clear I did not do any of the coding here at all lol. But anyways, some advice for using this tool:
+1. Use your own content, not others, unless you have explicit permission from them, for obvious reasons.
+2. Review videos before uploading them.
+3. If you need to generate a thumbnail from a still part of the video I like to use `ffmpeg -ss 4.0 -i input.mp4 -frames:v 1 output_clip.png`
 
 ## What it does
 
@@ -38,8 +45,8 @@ or re-call the API unless you pass `--fresh`.
 ## Cost
 
 Each run makes one Claude API call (a few thousand tokens) - typically
-**$0.30-0.70 per video** using Fable 5, and less than $0.10 with any of the other models, depending on length. Transcription runs locally
-and is free.
+**$0.30-0.70 per landscape video being clipped** using Fable 5, and less than $0.10 with any of the other models (you can change which model is being used easily in the python file, you'll see it), depending on length. Transcription runs locally
+and is free. Default model is Fable 5.
 
 ---
 
