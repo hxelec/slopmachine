@@ -3,6 +3,7 @@
 Turn a single long-form video into several ready-to-upload vertical Shorts,
 fully automated: transcription, clip selection, and rendering all happen
 in one run. Example output: https://www.youtube.com/shorts/b7LhuIzKvkg 
+All prerequisite knowledge you need to use this is basically just an understanding of how to navigate the file directory in your OS through the terminal.
 
 ## Notes from the 'prompt engineer' 🥀
 
