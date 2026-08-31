@@ -10,6 +10,10 @@ in one run. Example output: https://www.youtube.com/shorts/b7LhuIzKvkg
 2. If you need to generate a thumbnail from a still part of the video I like to use `ffmpeg -ss 4.0 -i input.mp4 -frames:v 1 output_clip.png` where instead of 4.0 you would put how many seconds into the video you want to clip. Obviously you would need to cd into the folder beforehand.
 3. If you need to modify something, such as changing the model that determines which parts to clip from the transcript from Fable 5 to Sonnet 5: `CLIP_MODEL = "claude-sonnet-5"` (line 40) or the changing the target amount of clips from the landscape long form video `TARGET_CLIP_COUNT = 4` (line 37), the python syntax is really as close to plain English as you're going to get, so feel free to have a play around.
 4. I did not code this at all by the way in case it wasn't already obvious - I mainly did it with free Claude plan and upgraded to Pro once I hit my limit. If you want additional features I probably cannot help a ton with the actual code, at least for now. I'm more into C/C++ myself. But would love to be a part of community development if this ever goes somewhere, maybe this is a chance for me to learn how to code these type of things. Feel free to put up an issue or email me at rain@haaseindustries.com if you want to discuss anything. I uploaded the code here because I think it's something that should be free.
+5. I only tested this on a Windows 11 machine. Also, some videos are genuinely just unclippable in terms of the output is straight slop, and you just kind of have to accept that you won't get anything good out of it. That's why the default is Fable 5 just to make sure you really know those clips are the best your landscape video has to offer essentially. The only limitation is it can't see the video as well but it shouldn't matter too much.
+
+Cheers,
+a newly inducted claude larper.
 
 ## What it does
 
